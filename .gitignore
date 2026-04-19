@@ -1,0 +1,10 @@
+# Local helpers used while building the site - do not publish
+_extract.py
+_resume.txt
+*.pdf
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,45 @@
+name: Deploy resume site to GitHub Pages
+
+# Optional: deploys index.html / style.css / app.js to GitHub Pages on every push
+# to main. Use this OR the "Deploy from a branch" Pages source - not both.
+#
+# Repo setup once:
+#   Settings -> Pages -> Build and deployment -> Source = "GitHub Actions"
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Upload static site as Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # everything in repo root is the site
+          path: .
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

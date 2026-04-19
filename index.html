@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jins Thomas — DevOps Specialist. Multi-cloud (Azure & GCP), Kubernetes platforms, CI/CD architecture, Infrastructure as Code, API Gateways, and platform migrations." />
+  <meta name="author" content="Jins Thomas" />
+  <meta name="theme-color" content="#0b1220" />
+  <meta property="og:title" content="Jins Thomas — DevOps Specialist" />
+  <meta property="og:description" content="DevOps Specialist with strong experience designing, building and operating scalable cloud infrastructure on Azure and GCP." />
+  <meta property="og:type" content="website" />
+  <title>Jins Thomas — DevOps Specialist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23b8763a'/%3E%3Ctext x='50%25' y='54%25' font-family='Playfair Display,Georgia,serif' font-size='30' font-weight='800' fill='%23fbf6e7' text-anchor='middle' dominant-baseline='middle'%3EJT%3C/text%3E%3C/svg%3E" />
+  <!-- Apply persisted theme (default: beige) BEFORE first paint to avoid FOUC -->
+  <script>
+    (function () {
+      var VALID = ['dark','light','beige','gold'];
+      var t = null;
+      try { t = localStorage.getItem('jt-resume-theme'); } catch (e) {}
+      if (VALID.indexOf(t) === -1) t = 'beige';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+  <!-- Floating controls -->
+  <div class="controls no-print" role="toolbar" aria-label="Page controls">
+    <div class="theme-picker" role="radiogroup" aria-label="Select theme">
+      <button class="swatch swatch--beige"  data-theme="beige"  role="radio" aria-checked="true"  title="Beige (warm · default)"><span class="sr-only">Beige</span></button>
+      <button class="swatch swatch--gold"   data-theme="gold"   role="radio" aria-checked="false" title="Gold (luxury)"><span class="sr-only">Gold</span></button>
+      <button class="swatch swatch--dark"   data-theme="dark"   role="radio" aria-checked="false" title="Midnight (dark)"><span class="sr-only">Dark</span></button>
+      <button class="swatch swatch--light"  data-theme="light"  role="radio" aria-checked="false" title="Daylight (light)"><span class="sr-only">Light</span></button>
+    </div>
+    <button id="print-btn" class="ctrl-btn" aria-label="Print / save as PDF" title="Print / save as PDF" onclick="window.print()">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+    </button>
+  </div>
+
+  <main class="page">
+    <!-- HERO -->
+    <header class="hero" data-reveal="fade-up">
+      <div class="hero__inner">
+        <div class="avatar avatar--photo" role="img" aria-label="Photo of Jins Thomas">
+          <img src="./jins-thomas.jpg" alt="Jins Thomas" loading="eager" decoding="async"
+               onerror="this.style.display='none'; this.parentElement.classList.add('avatar--fallback');" />
+          <span class="avatar__initials" aria-hidden="true">JT</span>
+        </div>
+        <div class="hero__text">
+          <h1 class="name">Jins Thomas</h1>
+          <p class="title">DevOps Specialist · Platform &amp; Cloud Engineering</p>
+          <p class="tagline">
+            Multi-Cloud (Azure &amp; GCP) · Kubernetes · CI/CD Architecture · Terraform · API Gateways
+          </p>
+          <ul class="contact" aria-label="Contact information">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:jinsthomas005@gmail.com">jinsthomas005@gmail.com</a>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+35796297190">+357 96 297 190</a>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+919995644226">+91 99956 44226</a>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Limassol, Cyprus &middot; native Kerala, India</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- SUMMARY -->
+    <section class="section summary" aria-labelledby="summary-title" data-reveal="fade-up">
+      <h2 id="summary-title" class="section__title">Profile</h2>
+      <p>
+        DevOps Specialist with strong experience designing, building, and operating
+        scalable cloud infrastructure and DevOps platforms for modern applications.
+      </p>
+      <p>
+        Experienced in <strong>multi-cloud environments</strong> including
+        Microsoft <strong>Azure</strong> and <strong>Google Cloud Platform (GCP)</strong>,
+        with a strong focus on <strong>Kubernetes platforms</strong>,
+        <strong>Infrastructure as Code</strong>, and <strong>automated CI/CD systems</strong>.
+      </p>
+      <p>
+        Skilled in designing DevOps architectures and leading platform migrations,
+        including CI/CD platform transitions from <strong>GitLab CI/CD to GitHub Actions</strong>
+        and cloud infrastructure migrations from <strong>Azure to GCP</strong>.
+        Experienced in modernizing DevOps workflows to improve scalability,
+        reliability, and operational efficiency.
+      </p>
+      <p>
+        Currently working on <strong>AI platform infrastructure</strong>,
+        managing cloud networking, container platforms, API gateways, and
+        microservices deployments. Open to opportunities in
+        <strong>DevOps, Platform Engineering, and Cloud Infrastructure</strong>
+        roles across Europe.
+      </p>
+    </section>
+
+    <!-- KEY EXPERTISE -->
+    <section class="section" aria-labelledby="expertise-title" data-reveal="fade-up">
+      <h2 id="expertise-title" class="section__title">Key Expertise</h2>
+      <div class="grid grid--3 stagger">
+        <div class="card">
+          <h3>Multi-Cloud Architecture</h3>
+          <p>Microsoft Azure &amp; Google Cloud Platform — landing-zone design, networking, IAM, hub-and-spoke topologies, cross-cloud workloads.</p>
+        </div>
+        <div class="card">
+          <h3>Kubernetes Platforms</h3>
+          <p>AKS &amp; GKE — cluster design, RBAC, ingress/Gateway API, Helm packaging, GitOps with ArgoCD, day-2 operations.</p>
+        </div>
+        <div class="card">
+          <h3>CI/CD Platforms</h3>
+          <p>GitHub Actions, GitLab CI/CD, ArgoCD, Jenkins. Reusable shared templates, release pipelines, security gates.</p>
+        </div>
+        <div class="card">
+          <h3>Infrastructure as Code</h3>
+          <p>Terraform, ARM templates, PowerShell. Modular, environment-driven IaC for Azure, GCP, and Kubernetes.</p>
+        </div>
+        <div class="card">
+          <h3>API Gateways &amp; APIM</h3>
+          <p>Apigee, Azure API Management, Agent Gateway — proxy design, LLM routing, rate limiting, security policies.</p>
+        </div>
+        <div class="card">
+          <h3>Platform Migrations</h3>
+          <p>Led <strong>Azure → GCP</strong> infrastructure migration and <strong>GitLab → GitHub</strong> CI/CD migration for AI workloads.</p>
+        </div>
+        <div class="card">
+          <h3>Secure Networking</h3>
+          <p>Private endpoints, Private Service Connect, Cloud NAT, NSGs / firewall rules, TLS &amp; mTLS, certificate management.</p>
+        </div>
+        <div class="card">
+          <h3>FinOps &amp; Cost Optimization</h3>
+          <p>Right-sizing, autoscaling, reserved capacity, tagging &amp; chargeback, cost dashboards across multi-cloud estates.</p>
+        </div>
+        <div class="card">
+          <h3>Release &amp; Reliability</h3>
+          <p>Supporting release processes, scalable cloud platforms, reliable deployments for AI &amp; microservices applications.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" aria-labelledby="exp-title" data-reveal="fade-up">
+      <h2 id="exp-title" class="section__title">Professional Experience</h2>
+      <div class="timeline stagger">
+
+        <!-- amAIz GenAI Platform (combined) -->
+        <article class="exp">
+          <div class="exp__head">
+            <div>
+              <h3 class="exp__role">DevOps Specialist — AI Platform</h3>
+              <p class="exp__company">amAIz · GenAI Platform <span class="dot">·</span> <span class="exp__current">Current</span></p>
+            </div>
+          </div>
+          <p class="exp__lead">
+            Designing and operating multi-cloud DevOps and Kubernetes platforms for the
+            amAIz Generative AI product line. Driving the migration from Azure to GCP
+            and from GitLab CI/CD to GitHub Actions, while keeping production AI
+            services on both clouds running reliably.
+          </p>
+          <ul class="exp__bullets">
+            <li><strong>Multi-cloud platform engineering</strong> across <strong>Azure</strong> and <strong>GCP</strong> — landing zone, IAM, networking, GKE / AKS clusters, shared services.</li>
+            <li><strong>Led the GitLab → GitHub migration</strong> for the AI platform: re-built CI/CD on GitHub Actions with reusable shared workflows, secrets &amp; environments, OIDC to cloud, branch protection and release flows.</li>
+            <li><strong>Led the Azure → GCP infrastructure migration</strong> for AI workloads — GKE, Cloud SQL, Secret Manager, Cloud Storage, Cloud KMS, Cloud Armor, Private Service Connect, Cloud NAT.</li>
+            <li>Designed and managed Azure resources — VNets, subnets, NSGs, Application Gateway, Private DNS, Storage Accounts, VMs, disks, Private Endpoints, <strong>Azure OpenAI</strong>; AKS workloads with API Management, Logic Apps and PostgreSQL / Cosmos DB.</li>
+            <li>Configured <strong>Key Vault</strong>, security policies and DR strategies, optimizing security and high availability for AI-driven applications.</li>
+            <li>Designed and operated the <strong>API gateway</strong> stack on <strong>Apigee</strong>, <strong>Azure API Management</strong> and <strong>Agent Gateway</strong> for LLM routing, multi-tenant proxies and security policies.</li>
+            <li>Built GitOps delivery on <strong>ArgoCD + Helm</strong> for microservices and MCP servers; standardized Helm charts with HTTPRoute (Gateway API), Workload Identity, HPA and config / secret management.</li>
+            <li>Implemented <strong>Workload Identity Federation</strong> from Kubernetes Service Accounts to Google Service Accounts with least-privilege cross-project access.</li>
+            <li>Owned <strong>secure networking</strong> — private endpoints, hub-and-spoke topology, Cloud Armor, mTLS between services, corporate proxy &amp; CA trust chain.</li>
+            <li>Implemented <strong>GitLab CI/CD</strong> with merge trains and merge result pipelines (initial Azure phase); contributed to design-stage features leveraging the Azure SDK.</li>
+            <li>Built <strong>release and on-call tooling</strong> including a read-only DevOps troubleshooting agent integrating kubectl, gcloud, ArgoCD, Apigee, Elastic and GitHub.</li>
+            <li>Maintained the release process and provided support for smooth deployments and stability in customer environments.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Azure</span><span class="tag">GCP</span><span class="tag">AKS</span><span class="tag">GKE</span>
+            <span class="tag">Azure OpenAI</span><span class="tag">APIM</span><span class="tag">Key Vault</span>
+            <span class="tag">GitHub Actions</span><span class="tag">GitLab CI</span><span class="tag">ArgoCD</span><span class="tag">Helm</span>
+            <span class="tag">Terraform</span><span class="tag">Apigee</span><span class="tag">Agent Gateway</span>
+            <span class="tag">Cloud Armor</span><span class="tag">Workload Identity</span><span class="tag">FinOps</span>
+          </div>
+        </article>
+
+        <!-- Amdocs Optima -->
+        <article class="exp">
+          <div class="exp__head">
+            <div>
+              <h3 class="exp__role">DevOps Specialist</h3>
+              <p class="exp__company">Amdocs Optima</p>
+            </div>
+          </div>
+          <ul class="exp__bullets">
+            <li>Designed, implemented and maintained <strong>CI/CD pipelines</strong> using <strong>Jenkins</strong> and Groovy scripting; automated build, test and deployment for microservices and monolithic applications.</li>
+            <li>Troubleshot pipeline failures, integration issues and performance bottlenecks to keep delivery flowing.</li>
+            <li>Installed, configured and maintained <strong>Jenkins</strong> for enterprise environments — plugin management, pipeline automation, security hardening, RBAC and user-access control.</li>
+            <li>Created custom deployment automation in <strong>Groovy, Shell and Bash</strong> scripting.</li>
+            <li>Performed regular <strong>backups and restores</strong> for DevOps tooling, ensuring high availability and disaster recovery.</li>
+            <li>Installed, configured and managed <strong>GitLab Enterprise</strong> for version control and CI/CD — repositories, user permissions, branch policies and pipeline standards.</li>
+            <li>Configured <strong>LDAP and SMTP</strong> integrations for DevOps tools.</li>
+            <li>Installed, configured and maintained <strong>Nexus Repository Manager</strong> for artifact storage — Docker images, Maven and NPM packages; automated backup, cleanup and repository integrations.</li>
+            <li>Built and optimized <strong>Docker</strong> images for microservices and enterprise applications.</li>
+            <li>Deployed and managed applications in <strong>Kubernetes</strong>, including RBAC, Ingress and end-to-end troubleshooting.</li>
+            <li>Implemented <strong>Helm charts</strong> and <strong>ArgoCD</strong> for automated deployments and GitOps workflows.</li>
+            <li>Set up and maintained <strong>NGINX Ingress controllers</strong> for traffic routing and load balancing.</li>
+            <li>Implemented <strong>OpenBao Key Vault</strong> with External Secrets for secure secret management in Kubernetes.</li>
+            <li>Automated infrastructure provisioning using <strong>Terraform</strong> across cloud and on-prem environments.</li>
+            <li>Managed and deployed workloads on <strong>AWS</strong> and Kubernetes clusters; deployed, managed and troubleshot production and staging environments.</li>
+            <li>Implemented continuous-deployment strategies across client environments; monitored system health, optimized performance and ensured high availability.</li>
+            <li>Implemented <strong>TLS / mTLS</strong> encryption for secure communication across microservices and managed SSL/TLS certificates for Jenkins, GitLab, Nexus, Kubernetes and ArgoCD.</li>
+            <li>Worked with <strong>PostgreSQL</strong> and <strong>Couchbase</strong> for database administration and automation.</li>
+            <li>Built a <strong>Configuration-as-Code (CAC) framework</strong> that delivers custom SQL queries and JSON files to Couchbase buckets, packaged as a Docker image.</li>
+            <li>Designed and implemented <strong>DevOps networking</strong> between client sites and Amdocs premises, ensuring secure and efficient connectivity across multiple locations.</li>
+            <li>Created automation for <strong>data synchronization between Nexus repositories</strong>, ensuring seamless flow between customer sites and Amdocs infrastructure.</li>
+            <li>Developed complex automation solutions integrated with products to streamline data publishing, integrity checks and notifications.</li>
+            <li>Acted as the <strong>focal point for DevOps technical issues</strong> — guiding teams, resolving complex challenges and assisting management in DevOps strategy and product-delivery planning.</li>
+            <li><strong>Onsite deployment &amp; knowledge transfer:</strong> traveled to <strong>Kazakhstan</strong> to build a complete DevOps environment and conducted knowledge-transfer sessions for the customer.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Jenkins</span><span class="tag">GitLab</span><span class="tag">Nexus</span>
+            <span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Helm</span>
+            <span class="tag">ArgoCD</span><span class="tag">NGINX</span>
+            <span class="tag">Terraform</span><span class="tag">AWS</span>
+            <span class="tag">OpenBao</span><span class="tag">TLS / mTLS</span>
+            <span class="tag">PostgreSQL</span><span class="tag">Couchbase</span>
+            <span class="tag">Groovy</span><span class="tag">Bash</span>
+          </div>
+        </article>
+
+        <!-- Infosys Senior SE -->
+        <article class="exp">
+          <div class="exp__head">
+            <div>
+              <h3 class="exp__role">Senior System Engineer / System Engineer (DevOps)</h3>
+              <p class="exp__company">Infosys Limited</p>
+            </div>
+          </div>
+          <ul class="exp__bullets">
+            <li>Designed and managed <strong>Azure cloud infrastructure</strong> — cost-effective, high-availability architectures across multiple clients.</li>
+            <li>Automated Azure provisioning with <strong>PowerShell</strong> and <strong>ARM templates</strong>; built post-provisioning automation.</li>
+            <li>Provisioned and managed <strong>AKS</strong> clusters; Helm-based deployments; troubleshooting for high availability and scalability.</li>
+            <li>Designed DevOps networking between client sites and Amdocs premises; built Nexus data sync automation across geographies.</li>
+            <li>Acted as the focal point for DevOps technical issues and assisted management on DevOps strategy and product delivery planning.</li>
+            <li>Onsite deployment and knowledge-transfer assignment in <strong>Kazakhstan</strong> — built a complete DevOps environment for the customer.</li>
+            <li>Implemented CI/CD pipelines for AKS using Helm charts; configured <strong>Datadog</strong> for cloud and Kubernetes monitoring.</li>
+            <li>Configured and managed <strong>Azure Pipelines</strong> for Continuous Delivery.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Azure</span><span class="tag">AKS</span><span class="tag">PowerShell</span>
+            <span class="tag">ARM</span><span class="tag">Helm</span><span class="tag">Datadog</span>
+            <span class="tag">Azure Pipelines</span><span class="tag">Nexus</span>
+          </div>
+        </article>
+
+        <!-- Infosys SE -->
+        <article class="exp">
+          <div class="exp__head">
+            <div>
+              <h3 class="exp__role">System Engineer (DevOps)</h3>
+              <p class="exp__company">Infosys Limited</p>
+            </div>
+          </div>
+          <ul class="exp__bullets">
+            <li>Containerized applications and daemon jobs using <strong>PKS (Pivotal Container Service)</strong>.</li>
+            <li>Authored Dockerfiles and Kubernetes manifests for client applications.</li>
+            <li>Built CI/CD pipelines using <strong>GitLab CI/CD</strong>; managed repositories, version control and collaboration.</li>
+            <li>Designed and optimized GitLab pipelines for build, test and deployment automation.</li>
+            <li>Monitored and managed pods, deployments and services using PKS Dashboard and <strong>kubectl</strong>; troubleshot containerized application and deployment issues.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">PKS</span><span class="tag">Docker</span><span class="tag">Kubernetes</span>
+            <span class="tag">GitLab CI</span>
+          </div>
+        </article>
+
+        <!-- Infosys Operations -->
+        <article class="exp">
+          <div class="exp__head">
+            <div>
+              <h3 class="exp__role">Senior Operation Executive / Operation Executive</h3>
+              <p class="exp__company">Infosys Limited</p>
+            </div>
+          </div>
+          <ul class="exp__bullets">
+            <li>Built and activated new telecom services for enterprise customers — VOIP services, trunks and routers.</li>
+            <li>Configured and provisioned network services for seamless connectivity and optimal performance.</li>
+            <li>Diagnosed and resolved network issues on switches and routers, ensuring minimal downtime.</li>
+            <li>Performed service migrations across platforms and managed lifecycle disconnections per contract policy.</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SIDE PROJECTS -->
+    <section class="section" aria-labelledby="projects-title" data-reveal="fade-up">
+      <h2 id="projects-title" class="section__title">Side Projects</h2>
+      <div class="grid grid--3 stagger">
+        <div class="card project">
+          <span class="project__status">In Progress</span>
+          <h3>DevOps Agent with Embedded MCPs</h3>
+          <p>
+            An LLM-powered, read-only DevOps troubleshooting agent for cloud-native
+            platforms. Embeds <strong>Model Context Protocol (MCP)</strong> servers
+            for kubectl, gcloud, ArgoCD, API gateway and observability backends so
+            the agent can investigate clusters, pipelines and traffic without
+            making changes. Pluggable LLM (OpenAI-compatible / Vertex AI), CLI +
+            web chat, Helm-deployable on Kubernetes with Workload Identity.
+          </p>
+          <div class="tags">
+            <span class="tag">LangGraph</span><span class="tag">FastAPI</span>
+            <span class="tag">MCP</span><span class="tag">Kubernetes</span>
+            <span class="tag">Helm</span><span class="tag">Python</span>
+          </div>
+        </div>
+
+        <div class="card project">
+          <span class="project__status">In Progress</span>
+          <h3>Collaborative Photo &amp; Event Platform</h3>
+          <p>
+            A collaborative web app for <strong>event photo management</strong> —
+            shared albums for weddings, trips and gatherings, with on-the-fly
+            <strong>custom event web pages</strong> and invitations. Multi-user
+            uploads, smart organisation, sharing controls and a lightweight
+            page-builder for hosts to launch a branded event site in minutes.
+          </p>
+          <div class="tags">
+            <span class="tag">Web App</span><span class="tag">Collaboration</span>
+            <span class="tag">Storage</span><span class="tag">Event Pages</span>
+          </div>
+        </div>
+
+        <div class="card project">
+          <span class="project__status">In Progress</span>
+          <h3>Shopify Auction App</h3>
+          <p>
+            A <strong>Shopify app</strong> that adds time-bound
+            <strong>auctions and bidding</strong> to merchant stores — auction
+            scheduling, real-time bid updates, anti-snipe extensions, automatic
+            winner-to-cart conversion and email notifications. Built as an
+            embedded Shopify app with the Shopify Admin / Storefront APIs.
+          </p>
+          <div class="tags">
+            <span class="tag">Shopify</span><span class="tag">App</span>
+            <span class="tag">E-commerce</span><span class="tag">Auctions</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" aria-labelledby="skills-title" data-reveal="fade-up">
+      <h2 id="skills-title" class="section__title">Hard Skills</h2>
+      <div class="grid grid--2 stagger">
+        <div class="card">
+          <h3>Cloud Platforms</h3>
+          <ul class="bullets">
+            <li><strong>Azure</strong> — administration, resource provisioning, AKS, networking, Key Vault, APIM, OpenAI</li>
+            <li><strong>Google Cloud Platform</strong> — GKE, IAM, VPC / PSC, Cloud SQL, Secret Manager, Cloud Armor, Cloud NAT, Vertex AI</li>
+            <li><strong>AWS</strong> — basic exposure</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>DevOps &amp; CI/CD</h3>
+          <ul class="bullets">
+            <li><strong>GitHub Actions</strong> — reusable workflows, OIDC to cloud, security gates</li>
+            <li><strong>GitLab CI/CD</strong> — installation, merge trains, pipeline automation, backup &amp; restore</li>
+            <li><strong>Jenkins</strong> — enterprise install, pipelines, plugin &amp; security management</li>
+            <li><strong>ArgoCD</strong> — GitOps, app-of-apps, projects, sync waves</li>
+            <li><strong>Azure Pipelines</strong> · <strong>Helm</strong> chart authoring &amp; release</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Containers &amp; Orchestration</h3>
+          <ul class="bullets">
+            <li><strong>Kubernetes</strong> — RBAC, Ingress / Gateway API, troubleshooting, end-to-end cluster operations</li>
+            <li><strong>AKS</strong> &amp; <strong>GKE</strong> — provisioning, administration, deployment automation</li>
+            <li><strong>PKS</strong> · <strong>Docker</strong> · <strong>Docker Compose</strong> · <strong>Podman</strong></li>
+            <li>Container runtimes — CRI-O, containerd</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Infrastructure as Code &amp; Automation</h3>
+          <ul class="bullets">
+            <li><strong>Terraform</strong> — modular IaC for Azure, GCP, Kubernetes</li>
+            <li><strong>ARM templates</strong> for Azure resource automation</li>
+            <li><strong>PowerShell</strong> · <strong>Bash</strong> · <strong>Shell</strong> scripting</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>API Gateway &amp; API Management</h3>
+          <ul class="bullets">
+            <li><strong>Apigee</strong> — proxies, endpoint attachments, LLM routing</li>
+            <li><strong>Azure API Management</strong> — policies, products, developer portal</li>
+            <li><strong>Agent Gateway</strong> — agent-aware routing &amp; policy</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Networking &amp; Security</h3>
+          <ul class="bullets">
+            <li>NGINX Ingress Controller — install, configure, traffic routing</li>
+            <li>TLS / mTLS &amp; certificate management for microservices and DevOps tools</li>
+            <li>Private endpoints, Private Service Connect, Cloud NAT, NSGs, firewall design</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Artifact &amp; Image Management</h3>
+          <ul class="bullets">
+            <li><strong>Nexus Repository</strong> — install, config, data sync, backup &amp; restore</li>
+            <li><strong>Skopeo</strong> for copying / transferring container images</li>
+            <li><strong>ACR</strong> · <strong>ECR</strong> · GitHub / GitLab registries</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Databases &amp; Observability</h3>
+          <ul class="bullets">
+            <li><strong>PostgreSQL</strong>, <strong>Couchbase</strong>, <strong>Cosmos DB</strong>, MongoDB Atlas</li>
+            <li><strong>Datadog</strong>, Elastic Cloud, Cloud Logging / Monitoring</li>
+            <li>Configuration-as-Code (CAC) framework for Couchbase</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTS / EDU / ACHIEVEMENTS -->
+    <section class="section" aria-labelledby="qual-title" data-reveal="fade-up">
+      <h2 id="qual-title" class="section__title">Certifications, Education &amp; Achievements</h2>
+      <div class="grid grid--3 stagger">
+        <div class="card">
+          <h3>Certifications</h3>
+          <ul class="bullets">
+            <li><strong>AZ-900</strong> — Microsoft Azure Fundamentals</li>
+            <li><strong>AZ-104</strong> — Microsoft Azure Administrator</li>
+            <li><strong>AZ-400</strong> — Microsoft Azure DevOps Engineer Expert</li>
+            <li>Infosys Certified <strong>Kubernetes Administrator</strong></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Education</h3>
+          <ul class="bullets">
+            <li><strong>BSc Mathematics</strong></li>
+            <li>St. Dominic&rsquo;s College, Kanjirappally</li>
+            <li>2013 &ndash; 2016</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Achievements</h3>
+          <ul class="bullets">
+            <li>Recognized as <strong>Outstanding Performer</strong> in year-end evaluations for <strong>2017, 2018, 2019, 2022, 2023 and 2024</strong> for consistently exceeding performance expectations.</li>
+            <li>Led platform migrations (<strong>Azure → GCP</strong> and <strong>GitLab → GitHub</strong>) for the amAIz GenAI platform.</li>
+            <li>Onsite DevOps build-out &amp; knowledge transfer in <strong>Kazakhstan</strong>.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Languages</h3>
+          <ul class="bullets">
+            <li>English &mdash; Full Professional Proficiency</li>
+            <li>Malayalam &mdash; Native / Bilingual</li>
+            <li>Hindi &mdash; Limited Working Proficiency</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>
+        &copy; <span id="year"></span> Jins Thomas
+      </p>
+    </footer>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
