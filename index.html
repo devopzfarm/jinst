@@ -15,7 +15,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23b8763a'/%3E%3Ctext x='50%25' y='54%25' font-family='Playfair Display,Georgia,serif' font-size='30' font-weight='800' fill='%23fbf6e7' text-anchor='middle' dominant-baseline='middle'%3EJT%3C/text%3E%3C/svg%3E" />
-  <!-- Apply persisted theme (default: beige) BEFORE first paint to avoid FOUC -->
+  <!-- Apply persisted theme (default: beige) BEFORE first paint, and mark
+       .js-ready so reveal-on-scroll only hides content once we know JS is
+       running. If JS is disabled or this script crashes, the page falls
+       back to "everything visible" automatically. -->
   <script>
     (function () {
       var VALID = ['dark','light','beige','gold'];
@@ -23,6 +26,7 @@
       try { t = localStorage.getItem('jt-resume-theme'); } catch (e) {}
       if (VALID.indexOf(t) === -1) t = 'beige';
       document.documentElement.setAttribute('data-theme', t);
+      document.documentElement.classList.add('js-ready');
     })();
   </script>
 </head>

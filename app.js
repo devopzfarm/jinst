@@ -30,9 +30,9 @@
       var color = ({
         dark:  '#0b1220',
         light: '#f6f8fc',
-        beige: '#f4ecd8',
+        beige: '#f1e8d0',
         gold:  '#0c0a06'
-      })[theme] || '#0b1220';
+      })[theme] || '#f1e8d0';
       meta.setAttribute('content', color);
     }
   }
@@ -53,16 +53,26 @@
 
   // -----------------------------------------------------------------
   // Reveal-on-scroll animation
+  //
+  // Problem we're guarding against: on some mobile browsers
+  // (iOS Safari, WebView in-app browsers) IntersectionObserver fires
+  // unreliably for tall sections, leaving everything below the fold
+  // stuck at opacity: 0. We therefore (a) use very permissive observer
+  // settings, (b) reveal on first user interaction as a fallback,
+  // and (c) force-reveal everything after a short timeout no matter
+  // what.
   // -----------------------------------------------------------------
   var reduceMotion = window.matchMedia &&
     window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Targets that should fade up when scrolled into view
   var revealTargets = document.querySelectorAll('[data-reveal], .stagger');
 
-  if (reduceMotion || !('IntersectionObserver' in window)) {
-    // Just show everything immediately
+  function revealAll() {
     revealTargets.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    revealAll();
     return;
   }
 
@@ -75,18 +85,48 @@
 
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
+      if (entry.isIntersecting || entry.intersectionRatio > 0) {
         entry.target.classList.add('is-visible');
         io.unobserve(entry.target);
       }
     });
   }, {
-    rootMargin: '0px 0px -8% 0px',
-    threshold:  0.12
+    // Permissive: fire as soon as any pixel enters the viewport.
+    rootMargin: '0px 0px 0px 0px',
+    threshold:  0
   });
 
   revealTargets.forEach(function (el) {
-    if (el === hero) return; // already handled above
+    if (el === hero) return;
     io.observe(el);
+  });
+
+  // ----- safety nets -----
+
+  // 1. If the user starts interacting (scroll or touch), reveal
+  //    everything that's still hidden — better to show all content
+  //    than have a blank page.
+  var revealedByInteraction = false;
+  function onFirstInteraction() {
+    if (revealedByInteraction) return;
+    revealedByInteraction = true;
+    revealAll();
+    window.removeEventListener('scroll',     onFirstInteraction, true);
+    window.removeEventListener('touchstart', onFirstInteraction, true);
+    window.removeEventListener('touchmove',  onFirstInteraction, true);
+    window.removeEventListener('wheel',      onFirstInteraction, true);
+  }
+  window.addEventListener('scroll',     onFirstInteraction, { passive: true, capture: true });
+  window.addEventListener('touchstart', onFirstInteraction, { passive: true, capture: true });
+  window.addEventListener('touchmove',  onFirstInteraction, { passive: true, capture: true });
+  window.addEventListener('wheel',      onFirstInteraction, { passive: true, capture: true });
+
+  // 2. Hard fallback: after 2 seconds, anything still hidden gets
+  //    revealed. Animation may be skipped but content will be readable.
+  setTimeout(revealAll, 2000);
+
+  // 3. When the page is fully loaded (images, fonts), do one more pass.
+  window.addEventListener('load', function () {
+    setTimeout(revealAll, 600);
   });
 })();
