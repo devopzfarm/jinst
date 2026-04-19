@@ -37,14 +37,10 @@
     }
   }
 
-  // initial: stored value > prefers-color-scheme > dark default
+  // initial: stored value (if valid) → otherwise BEIGE default
   var initial = null;
   try { initial = localStorage.getItem(STORAGE_KEY); } catch (_) {}
-  if (VALID.indexOf(initial) === -1) {
-    initial = (window.matchMedia &&
-               window.matchMedia('(prefers-color-scheme: light)').matches)
-      ? 'light' : 'dark';
-  }
+  if (VALID.indexOf(initial) === -1) initial = 'beige';
   applyTheme(initial);
 
   swatches.forEach(function (s) {
