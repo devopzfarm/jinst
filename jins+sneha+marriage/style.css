@@ -431,6 +431,34 @@ img { display: block; max-width: 100%; }
   margin-bottom: 18px;
 }
 
+/* ---------- PORTRAIT ---------- */
+.portrait {
+  position: relative;
+  z-index: 1;
+  padding: 20px 24px 80px;
+  display: flex;
+  justify-content: center;
+}
+.portrait-frame {
+  width: min(420px, 86vw);
+  padding: 14px;
+  background: var(--card);
+  border: 1px solid var(--gold-soft);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.portrait-frame:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 22px 56px rgba(177, 138, 68, 0.22);
+}
+.portrait-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
 /* ---------- FAMILIES ---------- */
 .families {
   position: relative;
