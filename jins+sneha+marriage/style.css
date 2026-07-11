@@ -451,38 +451,21 @@ body::after {
   display: flex;
   justify-content: center;
 }
-.portrait-frame {
-  width: min(760px, 92vw);
-  padding: 14px 14px 20px;
-  background: var(--card);
-  border: 1px solid var(--gold-soft);
-  border-radius: 18px;
-  box-shadow: var(--shadow);
+.portrait-cutout {
+  width: min(820px, 94vw);
   text-align: center;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
-.portrait-frame:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 24px 60px rgba(177, 138, 68, 0.24);
-}
-.portrait-arch {
-  display: block;
-  border-radius: 12px;
-  overflow: hidden;
-  /* thin gold inner ring for a matted, gallery feel */
-  box-shadow: inset 0 0 0 1px var(--gold-soft), 0 6px 18px rgba(74, 61, 39, 0.12);
-}
-.portrait-arch img {
+.portrait-cutout img {
   display: block;
   width: 100%;
   height: auto;
 }
 .portrait-caption {
   font-family: var(--script);
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: var(--rose);
   line-height: 1;
-  margin-top: 18px;
+  margin-top: 6px;
 }
 
 /* ---------- FAMILIES ---------- */
