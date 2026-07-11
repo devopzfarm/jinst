@@ -577,52 +577,6 @@ img { display: block; max-width: 100%; }
   pointer-events: none;
 }
 
-/* ---------- SCENES (the 3 portrait panels) ---------- */
-.scene {
-  position: relative;
-  z-index: 1;
-  padding: 60px 24px;
-  display: flex;
-  justify-content: center;
-}
-.scene-frame {
-  width: min(440px, 88vw);
-  padding: 12px;
-  background: var(--card);
-  border: 1px solid var(--gold-soft);
-  border-radius: 220px 220px 18px 18px;   /* gentle arch top */
-  box-shadow: var(--shadow);
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-.scene-frame:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 22px 56px rgba(177, 138, 68, 0.24);
-}
-.scene-frame img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 210px 210px 10px 10px;
-}
-.scene-divider {
-  display: block;
-  width: 64px;
-  height: 1px;
-  margin: 22px auto 0;
-  background: var(--gold-soft);
-  position: relative;
-}
-.scene-divider::after {
-  content: "❖";
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  color: var(--gold);
-  font-size: 0.8rem;
-  background: var(--bg);
-  padding: 0 8px;
-}
-
 /* ---------- REVEAL ANIMATION ---------- */
 .reveal {
   opacity: 0;
@@ -632,16 +586,6 @@ img { display: block; max-width: 100%; }
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-.reveal-zoom {
-  opacity: 0;
-  transform: translateY(34px) scale(0.95);
-  transition: opacity 1s ease, transform 1s cubic-bezier(0.22, 1, 0.36, 1);
-}
-.reveal-zoom.is-visible {
-  opacity: 1;
-  transform: translateY(0) scale(1);
 }
 
 @keyframes fadeUp {
@@ -680,8 +624,6 @@ img { display: block; max-width: 100%; }
 @media (max-width: 500px) {
   .cd-unit { min-width: 70px; padding: 14px 10px; }
   .event-card { padding: 32px 24px; }
-  .scene-frame { border-radius: 160px 160px 16px 16px; }
-  .scene-frame img { border-radius: 152px 152px 9px 9px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

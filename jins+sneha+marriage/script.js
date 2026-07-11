@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ---------- SCROLL REVEAL ---------- */
-  const revealEls = document.querySelectorAll('.reveal, .reveal-zoom');
+  const revealEls = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(
       (entries) => {
