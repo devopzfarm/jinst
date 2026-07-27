@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Jins Thomas — DevOps Specialist. Multi-cloud (Azure & GCP), Kubernetes platforms, CI/CD architecture, Infrastructure as Code, API Gateways, and platform migrations." />
+  <meta name="description" content="Jins Thomas — DevOps Specialist. GenAI platform infrastructure (NVIDIA NIM, Run:AI, RAG, Vertex AI / Azure OpenAI / AWS Bedrock), multi-cloud (Azure & GCP), Kubernetes, CI/CD architecture, Infrastructure as Code, API Gateways, and platform migrations." />
   <meta name="author" content="Jins Thomas" />
   <meta name="theme-color" content="#0b1220" />
   <meta property="og:title" content="Jins Thomas — DevOps Specialist" />
-  <meta property="og:description" content="DevOps Specialist with strong experience designing, building and operating scalable cloud infrastructure on Azure and GCP." />
+  <meta property="og:description" content="DevOps Specialist building GenAI platform infrastructure and operating scalable multi-cloud (Azure & GCP) Kubernetes, CI/CD and API-gateway platforms." />
   <meta property="og:type" content="website" />
   <title>Jins Thomas — DevOps Specialist</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,9 +102,17 @@
         reliability, and operational efficiency.
       </p>
       <p>
-        Currently working on <strong>AI platform infrastructure</strong>,
-        managing cloud networking, container platforms, API gateways, and
-        microservices deployments. Open to opportunities in
+        Currently focused on <strong>GenAI platform infrastructure</strong> —
+        serving <strong>NVIDIA LLMs</strong> on on-prem GPU clusters with
+        <strong>Run:AI</strong> and <strong>NVIDIA NIM</strong>, building
+        <strong>RAG</strong> pipelines with vector / document stores, and
+        integrating <strong>Azure OpenAI</strong>, <strong>Google Vertex AI</strong>
+        and <strong>AWS Bedrock</strong> — while operating the cloud networking,
+        container platforms, API gateways, and microservices behind production
+        AI workloads.
+      </p>
+      <p>
+        Open to opportunities in
         <strong>DevOps, Platform Engineering, and Cloud Infrastructure</strong>
         roles across Europe.
       </p>
@@ -114,6 +122,10 @@
     <section class="section" aria-labelledby="expertise-title" data-reveal="fade-up">
       <h2 id="expertise-title" class="section__title">Key Expertise</h2>
       <div class="grid grid--3 stagger">
+        <div class="card">
+          <h3>GenAI &amp; LLM Platforms</h3>
+          <p>NVIDIA NIM &amp; Run:AI on on-prem GPU clusters, RAG with NV-Ingest, vector / document stores, and managed LLMs — Azure OpenAI, Vertex AI, AWS Bedrock. A2A &amp; MCP.</p>
+        </div>
         <div class="card">
           <h3>Multi-Cloud Architecture</h3>
           <p>Microsoft Azure &amp; Google Cloud Platform — landing-zone design, networking, IAM, hub-and-spoke topologies, cross-cloud workloads.</p>
@@ -168,30 +180,39 @@
           </div>
           <p class="exp__lead">
             Designing and operating multi-cloud DevOps and Kubernetes platforms for the
-            amAIz Generative AI product line. Driving the migration from Azure to GCP
-            and from GitLab CI/CD to GitHub Actions, while keeping production AI
-            services on both clouds running reliably.
+            amAIz Generative AI product line — driving the migration from Azure to GCP
+            and from GitLab CI/CD to GitHub Actions, serving GenAI models, and keeping
+            production AI services running reliably across cloud and on-prem GPU
+            clusters.
           </p>
           <ul class="exp__bullets">
+            <li><strong>Led the Azure → Google Cloud migration</strong> for AI workloads using <strong>Terraform</strong> — GKE clusters, Compute Engine VMs, Cloud SQL (PostgreSQL), Dataproc, Vertex AI, Apigee, Load Balancers, Cloud Storage buckets with lifecycle rules, Secret Manager, Cloud KMS and Cloud Armor; plus managed services such as MongoDB Atlas and Elastic Cloud.</li>
+            <li>Built the <strong>GCP networking foundation</strong> — VPCs and subnets, Private Service Connect (PSC), site-to-site VPN, Network Connectivity Center (NCC), Cloud NAT, and firewall / routing for hybrid and multi-region connectivity.</li>
+            <li><strong>Deployed and operated NVIDIA LLMs on an on-prem GPU cluster</strong> using <strong>Run:AI</strong> (GPU orchestration / scheduling) and <strong>NVIDIA NIM</strong> microservices — serving models such as gpt-oss-120b, gpt-oss-20b, Llama-3.2-3B-Instruct and Llama-3.3-70B-Instruct.</li>
+            <li>Deployed NVIDIA <strong>embedding models</strong> (Llama-3.2-NV-EmbedQA-1B-v2) and built a <strong>RAG</strong> (Retrieval-Augmented Generation) pipeline using <strong>NVIDIA NV-Ingest</strong> for document ingestion, parsing and indexing.</li>
+            <li>Integrated multiple <strong>managed LLM providers</strong> — <strong>Azure OpenAI</strong>, <strong>Google Vertex AI</strong> and <strong>AWS Bedrock</strong> — for model routing, fallback and redundancy.</li>
+            <li>Deployed and configured <strong>data stores</strong> for the AI platform — <strong>MongoDB Atlas</strong> as vector store and document store (RAG), and <strong>PostgreSQL (Cloud SQL)</strong> on Google Cloud.</li>
+            <li>Designed and operated the <strong>API gateway</strong> stack on <strong>Apigee</strong>, <strong>Azure API Management</strong> and <strong>Agent Gateway</strong> — API proxies with rate limiting and custom authentication / authorization for LLM routing and multi-tenant traffic.</li>
+            <li>Supported the <strong>NGINX → Agent Gateway migration</strong> and implemented agent-oriented routing using <strong>A2A (Agent-to-Agent)</strong> and <strong>MCP (Model Context Protocol)</strong>.</li>
             <li><strong>Multi-cloud platform engineering</strong> across <strong>Azure</strong> and <strong>GCP</strong> — landing zone, IAM, networking, GKE / AKS clusters, shared services.</li>
-            <li><strong>Led the GitLab → GitHub migration</strong> for the AI platform: re-built CI/CD on GitHub Actions with reusable shared workflows, secrets &amp; environments, OIDC to cloud, branch protection and release flows.</li>
-            <li><strong>Led the Azure → GCP infrastructure migration</strong> for AI workloads — GKE, Cloud SQL, Secret Manager, Cloud Storage, Cloud KMS, Cloud Armor, Private Service Connect, Cloud NAT.</li>
-            <li>Designed and managed Azure resources — VNets, subnets, NSGs, Application Gateway, Private DNS, Storage Accounts, VMs, disks, Private Endpoints, <strong>Azure OpenAI</strong>; AKS workloads with API Management, Logic Apps and PostgreSQL / Cosmos DB.</li>
-            <li>Configured <strong>Key Vault</strong>, security policies and DR strategies, optimizing security and high availability for AI-driven applications.</li>
-            <li>Designed and operated the <strong>API gateway</strong> stack on <strong>Apigee</strong>, <strong>Azure API Management</strong> and <strong>Agent Gateway</strong> for LLM routing, multi-tenant proxies and security policies.</li>
             <li>Built GitOps delivery on <strong>ArgoCD + Helm</strong> for microservices and MCP servers; standardized Helm charts with HTTPRoute (Gateway API), Workload Identity, HPA and config / secret management.</li>
             <li>Implemented <strong>Workload Identity Federation</strong> from Kubernetes Service Accounts to Google Service Accounts with least-privilege cross-project access.</li>
-            <li>Owned <strong>secure networking</strong> — private endpoints, hub-and-spoke topology, Cloud Armor, mTLS between services, corporate proxy &amp; CA trust chain.</li>
+            <li>Owned <strong>secure networking</strong> — private endpoints, hub-and-spoke topology, Private Service Connect, Cloud Armor, mTLS between services, corporate proxy &amp; CA trust chain.</li>
+            <li>Designed and managed Azure resources — VNets, subnets, NSGs, Application Gateway, Private DNS, Storage Accounts, VMs, disks, Private Endpoints, <strong>Azure OpenAI</strong>; AKS workloads with API Management, Logic Apps and PostgreSQL / Cosmos DB.</li>
+            <li>Configured <strong>Key Vault</strong>, security policies and DR strategies, optimizing security and high availability for AI-driven applications.</li>
+            <li><strong>Led the GitLab → GitHub CI/CD migration</strong> — refactored and rebuilt pipelines for <strong>150+ repositories</strong> on GitHub Actions with reusable shared workflows, secrets &amp; environments, OIDC to cloud, runner configuration, branch protection, release flows and CI/CD security best practices.</li>
             <li>Implemented <strong>GitLab CI/CD</strong> with merge trains and merge result pipelines (initial Azure phase); contributed to design-stage features leveraging the Azure SDK.</li>
             <li>Built <strong>release and on-call tooling</strong> including a read-only DevOps troubleshooting agent integrating kubectl, gcloud, ArgoCD, Apigee, Elastic and GitHub.</li>
-            <li>Maintained the release process and provided support for smooth deployments and stability in customer environments.</li>
+            <li>Implemented an <strong>automated release process</strong> for our SaaS platform, now close to achieving fully one-click releases; maintained release stability across customer environments.</li>
           </ul>
           <div class="tags">
-            <span class="tag">Azure</span><span class="tag">GCP</span><span class="tag">AKS</span><span class="tag">GKE</span>
-            <span class="tag">Azure OpenAI</span><span class="tag">APIM</span><span class="tag">Key Vault</span>
+            <span class="tag">GCP</span><span class="tag">Azure</span><span class="tag">AWS</span><span class="tag">GKE</span><span class="tag">AKS</span>
+            <span class="tag">NVIDIA NIM</span><span class="tag">Run:AI</span><span class="tag">NV-Ingest</span><span class="tag">RAG</span>
+            <span class="tag">Vertex AI</span><span class="tag">Azure OpenAI</span><span class="tag">AWS Bedrock</span>
+            <span class="tag">MongoDB Atlas</span><span class="tag">PostgreSQL</span>
+            <span class="tag">Apigee</span><span class="tag">Agent Gateway</span><span class="tag">A2A</span><span class="tag">MCP</span>
             <span class="tag">GitHub Actions</span><span class="tag">GitLab CI</span><span class="tag">ArgoCD</span><span class="tag">Helm</span>
-            <span class="tag">Terraform</span><span class="tag">Apigee</span><span class="tag">Agent Gateway</span>
-            <span class="tag">Cloud Armor</span><span class="tag">Workload Identity</span><span class="tag">FinOps</span>
+            <span class="tag">Terraform</span><span class="tag">Workload Identity</span><span class="tag">FinOps</span>
           </div>
         </article>
 
@@ -366,11 +387,20 @@
       <h2 id="skills-title" class="section__title">Hard Skills</h2>
       <div class="grid grid--2 stagger">
         <div class="card">
+          <h3>AI / GenAI / LLM</h3>
+          <ul class="bullets">
+            <li><strong>NVIDIA NIM</strong> &amp; <strong>Run:AI</strong> — serving LLMs on on-prem GPU clusters (gpt-oss-120b / 20b, Llama-3.2-3B, Llama-3.3-70B)</li>
+            <li><strong>RAG</strong> pipelines with <strong>NVIDIA NV-Ingest</strong> &amp; embeddings (Llama-3.2-NV-EmbedQA-1B-v2)</li>
+            <li>Managed LLMs — <strong>Azure OpenAI</strong>, <strong>Google Vertex AI</strong>, <strong>AWS Bedrock</strong></li>
+            <li>Vector / document stores (<strong>MongoDB Atlas</strong>); <strong>A2A</strong> &amp; <strong>MCP</strong> protocols</li>
+          </ul>
+        </div>
+        <div class="card">
           <h3>Cloud Platforms</h3>
           <ul class="bullets">
             <li><strong>Azure</strong> — administration, resource provisioning, AKS, networking, Key Vault, APIM, OpenAI</li>
-            <li><strong>Google Cloud Platform</strong> — GKE, IAM, VPC / PSC, Cloud SQL, Secret Manager, Cloud Armor, Cloud NAT, Vertex AI</li>
-            <li><strong>AWS</strong> — basic exposure</li>
+            <li><strong>Google Cloud Platform</strong> — GKE, IAM, VPC / PSC, NCC, site-to-site VPN, Cloud SQL, Dataproc, Load Balancing, Apigee, Cloud Storage, Secret Manager, Cloud Armor, Cloud NAT, Vertex AI</li>
+            <li><strong>AWS</strong> — Bedrock, workload &amp; Kubernetes deployments</li>
           </ul>
         </div>
         <div class="card">
@@ -460,6 +490,7 @@
           <h3>Achievements</h3>
           <ul class="bullets">
             <li>Recognized as <strong>Outstanding Performer</strong> in year-end evaluations for <strong>2017, 2018, 2019, 2022, 2023 and 2024</strong> for consistently exceeding performance expectations.</li>
+            <li><strong>2026</strong> — awarded a <strong>special bonus</strong> and <strong>Top Performer</strong> recognition for outstanding results on the <strong>GitLab → GitHub</strong> migration.</li>
             <li>Led platform migrations (<strong>Azure → GCP</strong> and <strong>GitLab → GitHub</strong>) for the amAIz GenAI platform.</li>
             <li>Onsite DevOps build-out &amp; knowledge transfer in <strong>Kazakhstan</strong>.</li>
           </ul>
