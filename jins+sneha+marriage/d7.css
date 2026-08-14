@@ -283,12 +283,16 @@ img { display: block; max-width: 100%; }
   overflow: hidden; border-top: 1px solid var(--line);
 }
 .finale-photo { position: absolute; inset: 0; }
-.finale-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 26%; }
+.finale-photo img {
+  width: 100%; height: 100%; object-fit: cover; object-position: 50% 26%;
+  /* Only a soft shadow of the photograph should read through the ivory */
+  opacity: 0.26; filter: blur(9px) saturate(0.5); transform: scale(1.06);
+}
 .finale::after {
   content: ""; position: absolute; inset: 0;
   background:
-    linear-gradient(180deg, rgba(248, 245, 238, 0.30) 0%, rgba(248, 245, 238, 0.06) 40%, rgba(248, 245, 238, 0.42) 100%),
-    linear-gradient(90deg, rgba(139, 150, 112, 0.10), transparent 45%, rgba(176, 141, 87, 0.10));
+    linear-gradient(180deg, var(--ivory) 0%, rgba(248, 245, 238, 0.34) 42%, var(--ivory) 100%),
+    linear-gradient(90deg, rgba(139, 150, 112, 0.08), transparent 45%, rgba(176, 141, 87, 0.08));
 }
 
 /* ---------- FOOTER ---------- */
