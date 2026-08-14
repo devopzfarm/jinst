@@ -5,28 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Jins &amp; Sneha — Wedding Invitation</title>
-  <meta name="description" content="Together with our families, Jins Thomas and Sneha Elizabeth Thomas warmly invite you to their Holy Matrimony on 7 November 2026." />
-  <meta property="og:title" content="Jins & Sneha — Wedding Invitation" />
+  <meta name="description" content="Together with our families, Jins Thomas and Sneha Elizabeth Thomas warmly invite you to their Holy Matrimony on 7 November 2026 at Holy Cross Syro-Malabar Church, Kappadu, Kanjirappally." />
+  <link rel="canonical" href="https://jinsthomas.dev/jins+sneha+marriage/" />
+
+  <meta property="og:title" content="Jins &amp; Sneha — Wedding Invitation" />
   <meta property="og:description" content="We warmly invite you to celebrate our Holy Matrimony on 7 November 2026 at Holy Cross Syro-Malabar Church, Kappadu." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jinsthomas.dev/jins+sneha+marriage/" />
+  <meta property="og:image" content="https://jinsthomas.dev/jins+sneha+marriage/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Jins and Sneha holding hands in a sunlit meadow" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jins &amp; Sneha — Wedding Invitation" />
+  <meta name="twitter:description" content="7 November 2026 · Holy Cross Syro-Malabar Church, Kappadu, Kanjirappally." />
+  <meta name="twitter:image" content="https://jinsthomas.dev/jins+sneha+marriage/og-cover.jpg" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#f8f5ee" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="d7.css" />
 </head>
 <body>
-
-  <!-- ===== Falling petals (decorative) ===== -->
-  <div class="falling-petals" aria-hidden="true">
-    <span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span>
-  </div>
 
   <!-- ===== Navigation ===== -->
   <nav class="nav" id="nav">
     <div class="nav-inner">
-      <a href="#top" class="monogram">J<span>&amp;</span>S</a>
+      <a href="#top" class="monogram">Jins <span>&amp;</span> Sneha</a>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -38,9 +46,13 @@
     </div>
   </nav>
 
-  <!-- ===== Hero ===== -->
-  <header class="hero has-bg" id="top">
-    <div class="hero-content">
+  <!-- ===== Cover: names set over the photograph ===== -->
+  <header class="cover" id="top">
+    <figure class="cover-photo">
+      <img src="img/meadow.jpg" alt="Jins and Sneha" />
+    </figure>
+
+    <div class="cover-inner">
       <p class="prelude">Together with our families</p>
 
       <h1 class="couple">
@@ -49,17 +61,18 @@
         <span class="couple-name">Sneha</span>
       </h1>
 
-      <p class="tagline">request the honour of your gracious presence<br />at their Holy Matrimony</p>
+      <p class="tagline">request the honour of your gracious presence at their Holy Matrimony</p>
 
-      <div class="hero-date">
-        <span class="hero-day">Saturday</span>
-        <span class="hero-divider"></span>
-        <span class="hero-fulldate">7 · 11 · 2026</span>
-      </div>
+      <dl class="cover-meta">
+        <div><dt>Day</dt><dd>Saturday</dd></div>
+        <div><dt>Date</dt><dd>7 · 11 · 2026</dd></div>
+        <div><dt>Place</dt><dd>Kanjirappally</dd></div>
+      </dl>
 
       <a href="#invitation" class="btn btn-primary">View Invitation</a>
     </div>
-    <a href="#countdown" class="scroll-cue" aria-label="Scroll down">⌄</a>
+
+    <a href="#countdown" class="scroll-cue" aria-label="Scroll down">Scroll</a>
   </header>
 
   <!-- ===== Countdown ===== -->
@@ -74,12 +87,12 @@
     <p class="countdown-done" id="countdown-done" hidden>Today is the day! 🤍</p>
   </section>
 
-  <!-- ===== Invitation (verse + message) ===== -->
+  <!-- ===== 01 Invitation ===== -->
   <section class="invitation" id="invitation">
-    <div class="reveal">
-      <p class="verse-text">&ldquo;Therefore what God has joined together,<br />let no one separate.&rdquo;</p>
-      <p class="verse-ref">— Mark 10:9</p>
-
+    <div class="col-label reveal"><span>01</span> Invitation</div>
+    <div class="col-body reveal">
+      <p class="verse-text">&ldquo;Therefore what God has joined together, let no one separate.&rdquo;</p>
+      <p class="verse-ref">Mark 10:9</p>
       <div class="invitation-message">
         <p>Every beautiful journey begins with a single step, and by God&rsquo;s grace, ours has led us to this special day.</p>
         <p>With hearts full of love, gratitude, and joyful anticipation, we warmly invite you to celebrate the beginning of our forever. It would be our greatest joy to have you with us as we exchange our wedding vows and begin this new chapter of our lives together.</p>
@@ -87,44 +100,47 @@
     </div>
   </section>
 
-  <!-- ===== Portrait (transparent cut-out on ivory) ===== -->
-  <section class="portrait">
-    <figure class="portrait-cutout reveal">
-      <img src="couple-cutout.png" alt="Jins and Sneha" loading="lazy" />
-      <figcaption class="portrait-caption">Jins &amp; Sneha</figcaption>
+  <!-- ===== Split photograph ===== -->
+  <section class="split">
+    <figure class="split-photo reveal">
+      <img src="img/meadow-tall.jpg" alt="Jins and Sneha" loading="lazy" />
     </figure>
+    <div class="split-text reveal">
+      <p class="split-script">Jins &amp; Sneha</p>
+      <p class="split-note">7 November 2026 · Kanjirappally</p>
+    </div>
   </section>
 
-  <!-- ===== Families ===== -->
-  <section class="families has-bg" id="families">
-    <div class="reveal">
-      <p class="section-kicker">Together with our families</p>
-    </div>
+  <!-- ===== 02 Families ===== -->
+  <section class="families" id="families">
+    <div class="col-label reveal"><span>02</span> Families</div>
+    <div class="col-body">
+      <p class="section-kicker reveal">Together with our families</p>
 
-    <div class="families-grid">
-      <div class="family-block reveal">
-        <h3 class="family-name">Jins Thomas</h3>
-        <p class="family-parents">Son of Late Thomas Joseph &amp; Lissy Thomas</p>
-        <p class="family-house">Madathuvayalil House</p>
-        <p class="family-address">Kappadu P.O., Kanjirappally</p>
+      <div class="families-grid">
+        <div class="family-block reveal">
+          <h3 class="family-name">Jins Thomas</h3>
+          <p class="family-parents">Son of Late Thomas Joseph &amp; Lissy Thomas</p>
+          <p class="family-house">Madathuvayalil House</p>
+          <p class="family-address">Kappadu P.O., Kanjirappally</p>
+        </div>
+
+        <div class="family-block reveal">
+          <h3 class="family-name">Sneha Elizabeth Thomas</h3>
+          <p class="family-parents">Daughter of Salim Thomas &amp; Jeemol Joseph</p>
+          <p class="family-house">Ottaplackal House</p>
+          <p class="family-address">Velloor P.O., Pampady, Kottayam</p>
+        </div>
       </div>
 
-      <div class="family-amp reveal" aria-hidden="true">&amp;</div>
-
-      <div class="family-block reveal">
-        <h3 class="family-name">Sneha Elizabeth Thomas</h3>
-        <p class="family-parents">Daughter of Salim Thomas &amp; Jeemol Joseph</p>
-        <p class="family-house">Ottaplackal House</p>
-        <p class="family-address">Velloor P.O., Pampady, Kottayam</p>
-      </div>
+      <p class="families-request reveal">request the honour of your gracious presence at their Holy Matrimony</p>
     </div>
-
-    <p class="families-request reveal">request the honour of your gracious presence at their Holy Matrimony</p>
   </section>
 
-  <!-- ===== Ceremony ===== -->
+  <!-- ===== 03 Ceremony (arched card) ===== -->
   <section class="events" id="ceremony">
-    <div class="reveal">
+    <div class="events-head reveal">
+      <p class="col-label col-label-centre"><span>03</span> Ceremony</p>
       <p class="section-kicker">The Celebration</p>
       <h2 class="section-title">Wedding Ceremony</h2>
     </div>
@@ -139,7 +155,6 @@
         <p class="event-venue">Holy Cross Syro-Malabar Church</p>
         <p class="event-address">Kappadu, Kanjirappally</p>
         <div class="event-actions">
-          <!-- Opens Google Maps in directions mode (Maps app on mobile, Maps site on desktop) -->
           <a class="btn btn-outline" target="_blank" rel="noopener"
              href="https://www.google.com/maps/dir/?api=1&destination=Holy+Cross+Syro-Malabar+Church%2C+Kappadu%2C+Kanjirappally%2C+Kerala">Get Directions</a>
         </div>
@@ -152,19 +167,16 @@
   </section>
 
   <!-- ===== Closing blessing ===== -->
-  <section class="verse has-bg" id="closing">
-    <div class="reveal">
-      <p class="closing-message">Your presence will make this day even more meaningful, and your blessings will be a treasured part of the memories we create together. We look forward to celebrating this beautiful day with you.</p>
-    </div>
+  <section class="verse" id="closing">
+    <p class="closing-message reveal">Your presence will make this day even more meaningful, and your blessings will be a treasured part of the memories we create together. We look forward to celebrating this beautiful day with you.</p>
   </section>
 
-  <!--
-    ============================================================
-    GROW INTO A FULL SITE (Plan B) — add sections here when ready:
-      Reception details · Schedule · Travel & stay · RSVP · Wishes
-    The nav and styles are ready to extend.
-    ============================================================
-  -->
+  <!-- ===== Closing photograph ===== -->
+  <section class="finale" id="finale">
+    <figure class="finale-photo">
+      <img src="img/beach.jpg" alt="Jins and Sneha" loading="lazy" />
+    </figure>
+  </section>
 
   <!-- ===== Footer ===== -->
   <footer class="footer" id="footer">
@@ -173,6 +185,6 @@
     <p class="footer-made">&hearts; With love and blessings &hearts;</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="wedding.js"></script>
 </body>
 </html>
