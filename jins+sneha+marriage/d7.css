@@ -139,7 +139,9 @@ img { display: block; max-width: 100%; }
 
 .prelude {
   font-family: var(--serif); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.32em;
-  text-transform: uppercase; color: rgba(255, 255, 255, 0.82); margin-bottom: 18px;
+  text-transform: uppercase; color: #fff; margin-bottom: 18px;
+  /* Legible over the bright church without darkening the photograph */
+  text-shadow: 0 1px 12px rgba(40, 32, 20, 0.75), 0 0 3px rgba(40, 32, 20, 0.5);
 }
 .couple {
   font-family: var(--display); font-weight: 400;
@@ -153,7 +155,8 @@ img { display: block; max-width: 100%; }
 }
 .tagline {
   margin-top: 22px; max-width: 540px; font-size: 1.1rem; font-style: italic;
-  color: rgba(255, 255, 255, 0.88); line-height: 1.85;
+  color: #fff; line-height: 1.85;
+  text-shadow: 0 1px 14px rgba(40, 32, 20, 0.7), 0 0 3px rgba(40, 32, 20, 0.45);
 }
 .cover-meta {
   display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 62px);
@@ -161,9 +164,13 @@ img { display: block; max-width: 100%; }
 }
 .cover-meta dt {
   font-size: 0.7rem; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.66); margin-bottom: 6px;
+  color: rgba(255, 255, 255, 0.82); margin-bottom: 6px;
+  text-shadow: 0 1px 10px rgba(40, 32, 20, 0.7);
 }
-.cover-meta dd { font-family: var(--display); font-size: 1.3rem; letter-spacing: 0.04em; }
+.cover-meta dd {
+  font-family: var(--display); font-size: 1.3rem; letter-spacing: 0.04em;
+  text-shadow: 0 1px 14px rgba(40, 32, 20, 0.7);
+}
 .cover-inner .btn-primary { background: rgba(255, 255, 255, 0.95); color: var(--ink); border-color: rgba(255, 255, 255, 0.95); }
 .cover-inner .btn-primary:hover { background: transparent; color: #fff; border-color: #fff; box-shadow: none; }
 
