@@ -9,6 +9,10 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
+  /* The ivory palette is the design; opt out of the automatic dark theme that
+     Chrome applies on phones set to dark mode, which repaints it charcoal. */
+  color-scheme: only light;
+
   /* Layered ivories rather than plain white */
   --ivory: #f8f5ee;         /* page base */
   --ivory-deep: #eef0e6;    /* alternating band, faint sage cast */
